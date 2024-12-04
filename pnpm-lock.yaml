@@ -20,6 +20,15 @@ importers:
       pinia:
         specifier: ^2.2.6
         version: 2.2.8(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      postcss-pxtorem:
+        specifier: ^6.1.0
+        version: 6.1.0(postcss@8.4.49)
+      vant:
+        specifier: ^4.9.9
+        version: 4.9.9(vue@3.5.13(typescript@5.6.3))
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
@@ -761,6 +770,14 @@ packages:
   '@types/tough-cookie@4.0.5':
     resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
 
+  '@vant/popperjs@1.3.0':
+    resolution: {integrity: sha512-hB+czUG+aHtjhaEmCJDuXOep0YTZjdlRR+4MSmIFnkCQIxJaXLQdSsR90XWvAI2yvKUI7TCGqR8pQg2RtvkMHw==}
+
+  '@vant/use@1.6.0':
+    resolution: {integrity: sha512-PHHxeAASgiOpSmMjceweIrv2AxDZIkWXyaczksMoWvKV2YAYEhoizRuk/xFnKF+emUIi46TsQ+rvlm/t2BBCfA==}
+    peerDependencies:
+      vue: ^3.0.0
+
   '@vitejs/plugin-vue@5.2.1':
     resolution: {integrity: sha512-cxh314tzaWwOLqVes2gnnCtvBDcM1UMdn+iFR+UjAn411dPT3tOmqrJjbMd7koZpMAmBM/GqeV4n9ge7JSiJJQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -1460,6 +1477,11 @@ packages:
       typescript:
         optional: true
 
+  postcss-pxtorem@6.1.0:
+    resolution: {integrity: sha512-ROODSNci9ADal3zUcPHOF/K83TiCgNSPXQFSbwyPHNV8ioHIE4SaC+FPOufd8jsr5jV2uIz29v1Uqy1c4ov42g==}
+    peerDependencies:
+      postcss: ^8.0.0
+
   postcss@8.4.49:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
@@ -1655,6 +1677,11 @@ packages:
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
+
+  vant@4.9.9:
+    resolution: {integrity: sha512-sEw3ljwCza5dazpJqh04b38vCjNr2Id8vb7LOkYQQR/94iERDIm5jcQinhmwlRnwoGCa+JkNwm0jrCafzZJiwA==}
+    peerDependencies:
+      vue: ^3.0.0
 
   vite-hot-client@0.2.4:
     resolution: {integrity: sha512-a1nzURqO7DDmnXqabFOliz908FRmIppkBKsJthS8rbe8hBEXwEwe4C3Pp33Z1JoFCYfVL4kTOMLKk0ZZxREIeA==}
@@ -2438,6 +2465,12 @@ snapshots:
 
   '@types/tough-cookie@4.0.5': {}
 
+  '@vant/popperjs@1.3.0': {}
+
+  '@vant/use@1.6.0(vue@3.5.13(typescript@5.6.3))':
+    dependencies:
+      vue: 3.5.13(typescript@5.6.3)
+
   '@vitejs/plugin-vue@5.2.1(vite@6.0.2(@types/node@22.10.1)(sass@1.82.0))(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       vite: 6.0.2(@types/node@22.10.1)(sass@1.82.0)
@@ -3187,6 +3220,10 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.3
 
+  postcss-pxtorem@6.1.0(postcss@8.4.49):
+    dependencies:
+      postcss: 8.4.49
+
   postcss@8.4.49:
     dependencies:
       nanoid: 3.3.8
@@ -3360,6 +3397,13 @@ snapshots:
       browserslist: 4.24.2
       escalade: 3.2.0
       picocolors: 1.1.1
+
+  vant@4.9.9(vue@3.5.13(typescript@5.6.3)):
+    dependencies:
+      '@vant/popperjs': 1.3.0
+      '@vant/use': 1.6.0(vue@3.5.13(typescript@5.6.3))
+      '@vue/shared': 3.5.13
+      vue: 3.5.13(typescript@5.6.3)
 
   vite-hot-client@0.2.4(vite@6.0.2(@types/node@22.10.1)(sass@1.82.0)):
     dependencies:

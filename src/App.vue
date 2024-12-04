@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header>
     <div class="wrapper">
@@ -16,66 +12,55 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+import { useRouter } from "vue-router";
+import { showToast } from "vant";
+const router = useRouter();
+onMounted(() => {
+  document.oncontextmenu = function (e) {
+    e.preventDefault();
+  };
+  document.body.addEventListener(
+    "touchmove",
+    (e) => {
+      // 如果目标元素没有被标记为可拖动，阻止默认的拖动行为
+      if (!(e.target as any).__isDraggable) {
+        e.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+  // if (!(window as any).isTureAccount) {
+  //   showToast({
+  //     message: "无效用户!!!",
+  //     wordBreak: "break-word",
+  //   });
+  //   return;
+  // }
+
+});
+</script>
+
+
+<style scoped lang="scss">
+* {
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  -moz-user-select: none;
+  /*火狐*/
+  -ms-user-select: none;
+  /*IE10*/
+  user-select: none;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+input {
+  -webkit-user-select: auto;
+  /*webkit浏览器*/
 }
 </style>
