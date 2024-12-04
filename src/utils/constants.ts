@@ -15,24 +15,24 @@ const getEnv = () => {
 
 // 这些地址记得更换，只是站位
 export const domainHttpMap: Record<string, string> = {
-  debug: 'https://testbota.4utech.com',
-  test: 'https://testbota.4utech.com',
-  product: 'https://botasaas.4utech.com',
-  pre: 'https://testbota.4utech.com',
+  debug: '',
+  test: '',
+  product: '',
+  pre: '',
 }
 
 export const domainWsMap: Record<string, string> = {
-  debug: 'wss://debugbotaserver.4utech.com',
-  test: 'wss://testbotaserver.4utech.com',
-  product: 'wss://botaserver.4utech.com',
-  pre: 'wss://testbotaserver.4utech.com',
+  debug: '',
+  test: '',
+  product: '',
+  pre: '',
 }
 
 export const getTTsUrlMap: Record<string, string> = {
-  debug: 'https://botatts.4utech.com',
-  test: 'https://botatts.4utech.com',
-  product: 'https://botatts.4utech.com',
-  pre: 'https://botatts.4utech.com',
+  debug: '',
+  test: '',
+  product: '',
+  pre: '',
 }
 
 const ua = window.navigator.userAgent
