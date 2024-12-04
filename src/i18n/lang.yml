@@ -1,0 +1,25 @@
+# 翻译文件使用说明：
+# 注意事项
+# 1、文件中的 zh 为繁体中文，如果 zh 填入简体中文，请在完成翻译后将简体中文替换为对应的繁体中文。
+# 2、文案中如果存在特殊符号包裹，如： home.weekFreeTimeDesc1，home.weekSellDesc1 存在用 "{}" 包裹的内容，"{}" 中的内容不需要翻译也不需要修改，在保证正确语序前提下保留括号和括号里的英文。
+
+langs:
+  - en
+  - jp
+  - kor
+  - cht
+  - zh
+
+HomeView.dialogTitle:
+  en: "switch language"
+  jp: "言語の切り替え"
+  kor: "언어 전환"
+  cht: "切換語言"
+  zh: "语言切换"
+
+AboutView.jieguoBreak:
+  en: Result generation interrupted
+  jp: 結果生成が中断されました
+  kor: 결과 생성이 중단되었습니다
+  cht: 結果生成中斷
+  zh: "结果被打断"

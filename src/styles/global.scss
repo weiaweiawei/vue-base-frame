@@ -1,0 +1,26 @@
+@import url("./reset.scss");
+@import url("./atom.scss");
+
+//超出750px的根元素大小统一都设置为37.5px
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 37.5px !important;
+  }
+}
+
+* {
+  -webkit-user-select: none; /* 对iOS有效 */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+}

@@ -1,0 +1,319 @@
+@use "./variable.scss";
+// 新版本 Sass 使用 @use 或 @forward 替代 @import
+@for $v from 1 through 100 {
+  .lh-#{$v} {
+    line-height: #{$v}px;
+  }
+
+  .fs-#{$v} {
+    font-size: #{$v}px;
+  }
+
+  .radius-#{$v} {
+    border-radius: #{$v}px;
+  }
+}
+
+@for $v from 1 through 100 {
+  .pt-#{$v} {
+    padding-top: #{$v}px;
+  }
+
+  .pb-#{$v} {
+    padding-bottom: #{$v}px;
+  }
+
+  .pl-#{$v} {
+    padding-left: #{$v}px;
+  }
+
+  .pr-#{$v} {
+    padding-right: #{$v}px;
+  }
+
+  .px-#{$v} {
+    padding-left: #{$v}px;
+    padding-right: #{$v}px;
+  }
+
+  .py-#{$v} {
+    padding-top: #{$v}px;
+    padding-bottom: #{$v}px;
+  }
+
+  .p-#{$v} {
+    padding: #{$v}px;
+  }
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@for $v from 1 through 100 {
+  .mt-#{$v} {
+    margin-top: #{$v}px;
+  }
+
+  .mb-#{$v} {
+    margin-bottom: #{$v}px;
+  }
+
+  .ml-#{$v} {
+    margin-left: #{$v}px;
+  }
+
+  .mr-#{$v} {
+    margin-right: #{$v}px;
+  }
+
+  .mx-#{$v} {
+    margin-left: #{$v}px;
+    margin-right: #{$v}px;
+  }
+
+  .my-#{$v} {
+    margin-top: #{$v}px;
+    margin-bottom: #{$v}px;
+  }
+
+  .m-#{$v} {
+    margin: #{$v}px;
+  }
+}
+
+@for $v from 1 through 300 {
+  .w-#{$v} {
+    width: #{$v}px;
+  }
+
+  .h-#{$v} {
+    height: #{$v}px;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// 文本
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-overflow {
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.twoline {
+  letter-spacing: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /*要显示的行数*/
+  -webkit-box-orient: vertical;
+}
+
+.oneline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blod {
+  font-weight: 700;
+}
+
+.color-gold {
+  color: #fcdd4b;
+}
+
+.color-white {
+  color: variable.$color-TL0;
+}
+
+.bg-corlor-zi {
+  background-image: linear-gradient(90deg, #b14bff 0%, #7c4dff 100%);
+}
+
+.bg-color-red {
+  background-image: linear-gradient(270deg, #ff4ebd 0%, #ff7837 100%);
+}
+
+.bg-black {
+  background: variable.$color-B2;
+}
+
+.color-wh-black {
+  color: #ffffff73;
+}
+
+.relative {
+  position: relative;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.color-white {
+  color: variable.$color-TL0;
+}
+
+.color-white-90 {
+  color: variable.$color-TL1;
+}
+
+.color-white-75 {
+  color: variable.$color-TL3;
+}
+
+.color-white-60 {
+  color: variable.$color-TL3;
+}
+
+.color-white-45 {
+  color: variable.$color-TL4;
+}
+
+.color-white-25 {
+  color: variable.$color-TL5;
+}
+
+@for $v from 0 through 100 {
+  .pat-#{$v} {
+    top: #{$v}px;
+  }
+
+  .pab-#{$v} {
+    bottom: #{$v}px;
+  }
+
+  .pal-#{$v} {
+    left: #{$v}px;
+  }
+
+  .par-#{$v} {
+    right: #{$v}px;
+  }
+}
+
+//隐藏滚动条
+.hide-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}

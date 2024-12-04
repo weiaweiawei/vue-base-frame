@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "lib": ["es2017", "DOM"],
+    "strict": true,
+    "outDir": "out-tsc",
+    "rootDir": "./",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@js/*": ["src/js/*"],
+      "@pb/*": ["src/pb/*"],
+      "@api/*": ["src/api/*"],
+      "@component/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "resolveJsonModule": true
+  },
+  "include": ["src/*.ts", "src/**/*.ts", "**/*.vue"],
+  "exclude": ["node_modules"]
+  // "files": [],
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.node.json"
+  //   },
+  //   {
+  //     "path": "./tsconfig.app.json"
+  //   },
+  //   {
+  //     "path": "./tsconfig.vitest.json"
+  //   }
+  // ]
+}
+
+// references 使用

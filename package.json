@@ -1,0 +1,43 @@
+{
+  "name": "ue-cloud",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "botatiny": "node scripts/tiny-png.js --folder img",
+    "botawebp": "node scripts/webp.js --folder img",
+    "proto": "cross-env node scripts/gen-pb --branch",
+    "types": "pbjs -t static-module -w commonjs -o ./src/types/protobuf.js ./src/pb/*.proto && pbts -g pro -o ./src/types/protobuf.d.ts ./src/types/protobuf.js && rimraf ./src/types/protobuf.js"
+  },
+  "dependencies": {
+    "@modyfi/vite-plugin-yaml": "^1.1.0",
+    "amfe-flexible": "^2.2.1",
+    "axios": "^1.7.8",
+    "pinia": "^2.2.6",
+    "vue": "^3.5.13",
+    "vue-i18n": "^10.0.5",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.9.3",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "jsdom": "^25.0.1",
+    "npm-run-all2": "^7.0.1",
+    "sass": "^1.82.0",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.1",
+    "vite-plugin-vue-devtools": "^7.6.5",
+    "vitest": "^2.1.5",
+    "vue-tsc": "^2.1.10"
+  }
+}
